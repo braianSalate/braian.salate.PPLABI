@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1602683428 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/arrayMascotas.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"dataStore.h"
+	"arrayMascotas.h"
+
+1602685637 /Users/administador/Desktop/programacion1/parcial_veterinaria/dataStore.h
+
+1602684856 /Users/administador/Desktop/programacion1/parcial_veterinaria/arrayMascotas.h
+	"tipo.h"
+	"color.h"
+	"servicio.h"
+
+1602677446 /Users/administador/Desktop/programacion1/parcial_veterinaria/tipo.h
+
+1602685590 /Users/administador/Desktop/programacion1/parcial_veterinaria/color.h
+
+1602685584 /Users/administador/Desktop/programacion1/parcial_veterinaria/servicio.h
+
