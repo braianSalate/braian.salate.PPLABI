@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include "tipo.h"
 #include "dataStore.h"
+#include "tipo.h"
+
 
 
 void printTipo(eTipo tipo)
 {
-    printf("    %4d      %10s  \n", tipo.idTipo, tipo.descripcionTipo);
+    printf("               %4d                  %10s  \n", tipo.idTipo, tipo.descripcionTipo);
 }
 
 
@@ -23,9 +24,9 @@ int printTipos(eTipo tipos[], int tams)
     {
         //printf("\033[2J");
         printf("                   ***Listado de Tipos de mascotas***\n");
-        printf("----------------------------------------------------------------------\n");
-        printf("              ID Tipo               Descriopcion    \n");
-        printf("----------------------------------------------------------------------\n");
+        printf("       -----------------------------------------------|\n");
+        printf("       |        ID Tipo                  Descripcion    \n");
+        printf("       -----------------------------------------------|\n");
         for(int i=0; i<tams; i++)
         {
                 printTipo(tipos[i]);
@@ -47,27 +48,6 @@ int printTipos(eTipo tipos[], int tams)
 }
 
 
-
-int cargarDescripcionTipo(eTipo tipos[], int tams, int id, char desripcion[])
-{
-    int error =1;
-
-    if(tipos != NULL && tams > 0 && descripcion!= NULL)
-    {
-        for(int i = 0;i<tams; i++)
-        {
-            if(tipos[i].idTipo == id)
-            {
-                strcpy(descripcion, tipos[i].descricionTipo);
-                error =0;
-                puts(descripcion);
-                break;
-            }
-        }
-        return error;
-    }
-}
-
 int hardcodearTipo(eTipo tipos[], int tam, int cant)
 {
     int retorno = -1;
@@ -78,7 +58,7 @@ int hardcodearTipo(eTipo tipos[], int tam, int cant)
         for(int i=0; i<cant; i++)
         {
             tipos[i].idTipo = idTipos[i];
-            strcpy(tipos[i].descripcionTipo, tipos[i]);
+            strcpy(tipos[i].descripcionTipo, tiposDescripcion[i]);
 
             retorno++; // esto me devolvera la cantidad de empleados hardcodeados
         }
@@ -86,4 +66,27 @@ int hardcodearTipo(eTipo tipos[], int tam, int cant)
     retorno = retorno + 1; // Esto lo hago para que el proximo empleado que de de alta me entre con el id correcto
     return retorno;
 }
+
+
+
+int cargarDescripcionTipo(eTipo tipos[], int tamt, int id, char descripcion[])
+{
+    int error =1;
+
+    if(tipos != NULL && tamt > 0 && id > 0 && descripcion != NULL)
+    {
+        for(int i = 0; i < tamt; i++)
+        {
+            if(tipos[i].idTipo == id)
+            {
+                strcpy(descripcion, tipos[i].descripcionTipo);
+                error = 0;
+                break;
+             }
+
+        }
+        return error;
+    }
+}
+
 

@@ -7,3 +7,8 @@ typedef struct{
 }eTipo;
 
 #endif // TIPO_H_INCLUDED
+void printTipo(eTipo tipo);
+
+int printTipos(eTipo tipos[], int tams);
+int hardcodearTipo(eTipo tipos[], int tam, int cant);
+int cargarDescripcionTipo(eTipo tipos[], int tamt, int id, char descripcion[]);

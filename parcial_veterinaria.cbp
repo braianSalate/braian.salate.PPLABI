@@ -31,9 +31,36 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="arrayMascotas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arrayMascotas.h" />
+		<Unit filename="color.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="color.h" />
+		<Unit filename="dataStore.h" />
+		<Unit filename="dataStoreColor.h" />
+		<Unit filename="dataStoreServicios.h" />
+		<Unit filename="fecha.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fecha.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="servicio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="servicio.h" />
+		<Unit filename="tipo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tipo.h" />
+		<Unit filename="trabajo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="trabajo.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

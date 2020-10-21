@@ -1,22 +1,108 @@
 # depslib dependency file v1.0
-1602683428 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/arrayMascotas.c
+1603290531 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/arrayMascotas.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"arrayMascotas.h"
+	"dataStoreMascotas.h"
+	"tipo.h"
+	"color.h"
+	"cliente.h"
+	"servicio.h"
+	"trabajo.h"
+
+1603070635 /Users/administador/Desktop/programacion1/parcial_veterinaria/dataStore.h
+
+1603288900 /Users/administador/Desktop/programacion1/parcial_veterinaria/arrayMascotas.h
+	"tipo.h"
+	"color.h"
+	"cliente.h"
+
+1603278690 /Users/administador/Desktop/programacion1/parcial_veterinaria/tipo.h
+
+1602685590 /Users/administador/Desktop/programacion1/parcial_veterinaria/color.h
+
+1602685584 /Users/administador/Desktop/programacion1/parcial_veterinaria/servicio.h
+
+1603216274 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/color.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"color.h"
+	"dataStoreColor.h"
+
+1603063457 /Users/administador/Desktop/programacion1/parcial_veterinaria/dataStoreColor.h
+
+1602677918 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/fecha.c
+	<stdio.h>
+	<stdlib.h>
+	"fecha.h"
+
+1602677882 /Users/administador/Desktop/programacion1/parcial_veterinaria/fecha.h
+
+1603278844 /Users/administador/Desktop/programacion1/parcial_veterinaria/trabajo.h
+	"fecha.h"
+	"arrayMascotas.h"
+	"servicio.h"
+	"tipo.h"
+	"cliente.h"
+
+1603290180 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"arrayMascotas.h"
+	"tipo.h"
+	"trabajo.h"
+	"servicio.h"
+	"color.h"
+	"cliente.h"
+
+1603290599 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/servicio.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"servicio.h"
+	"dataStoreServicios.h"
+
+1603212544 /Users/administador/Desktop/programacion1/parcial_veterinaria/dataStoreServicios.h
+
+1603216427 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/tipo.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	"dataStore.h"
-	"arrayMascotas.h"
-
-1602685637 /Users/administador/Desktop/programacion1/parcial_veterinaria/dataStore.h
-
-1602684856 /Users/administador/Desktop/programacion1/parcial_veterinaria/arrayMascotas.h
 	"tipo.h"
-	"color.h"
-	"servicio.h"
 
-1602677446 /Users/administador/Desktop/programacion1/parcial_veterinaria/tipo.h
+1603290531 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"trabajo.h"
+	"cliente.h"
 
-1602685590 /Users/administador/Desktop/programacion1/parcial_veterinaria/color.h
+1603123353 /Users/administador/Desktop/programacion1/parcial_veterinaria/dataStoreMascotas.h
 
-1602685584 /Users/administador/Desktop/programacion1/parcial_veterinaria/servicio.h
+1603235013 source:/Users/administador/Desktop/programacion1/parcial_veterinaria/cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"cliente.h"
+	"fecha.h"
+	"arrayMascotas.h"
+	"dataStoreClientes.h"
+
+1603234957 /Users/administador/Desktop/programacion1/parcial_veterinaria/cliente.h
+
+1603228066 /Users/administador/Desktop/programacion1/parcial_veterinaria/dataStoreTrabajo.h
+	"fecha.h"
+
+1603235176 /Users/administador/Desktop/programacion1/parcial_veterinaria/dataStoreClientes.h
 

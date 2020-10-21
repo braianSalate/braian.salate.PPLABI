@@ -3,12 +3,12 @@
 #include <ctype.h>
 #include <string.h>
 #include "color.h"
-#include "dataStore.h"
+#include "dataStoreColor.h"
 
 
 void printColor(eColor color)
 {
-    printf("    %4d      %10s  \n", color.idColor, color.nombreColor);
+    printf("                   %4d                  %10s  \n", color.idColor, color.nombreColor);
 }
 
 
@@ -22,10 +22,10 @@ int printColores(eColor colores[], int tamc)
     if(colores != NULL && tamc > 0)
     {
         //printf("\033[2J");
-        printf("                   ***Listado de Colores***\n");
-        printf("----------------------------------------------------------------------\n");
-        printf("              ID Color               Nombre color    \n");
-        printf("----------------------------------------------------------------------\n");
+        printf("                     ***Listado de Colores***\n");
+        printf("                ----------------------------------------\n");
+        printf("                  ID Color               Nombre color    \n");
+        printf("                ----------------------------------------\n");
         for(int i=0; i<tamc; i++)
         {
                 printColor(colores[i]);
@@ -58,7 +58,7 @@ int hardcodearColor(eColor colores[], int tam, int cant)
         for(int i=0; i<cant; i++)
         {
             colores[i].idColor = idColores[i];
-            strcpy(colores[i].nombreColor, nombresColores[i]);
+            strcpy(colores[i].nombreColor, nombreColores[i]);
 
             retorno++; // esto me devolvera la cantidad de empleados hardcodeados
         }
@@ -71,17 +71,17 @@ int cargarDescripcionColor(eColor colores[], int tamc, int id, char descripcion[
 {
     int error =1;
 
-    if(tipos != NULL && tamc > 0 && descripcion!= NULL)
+    if(colores != NULL && tamc > 0 && descripcion != NULL)
     {
         for(int i = 0;i<tamc; i++)
         {
             if(colores[i].idColor == id)
             {
                 strcpy(descripcion, colores[i].nombreColor);
-                error =0;
-                puts(descripcion);
+                error = 0;
                 break;
             }
+
         }
         return error;
     }

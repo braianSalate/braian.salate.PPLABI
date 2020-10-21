@@ -3,11 +3,11 @@
 #include <ctype.h>
 #include <string.h>
 #include "servicio.h"
-#include "dataStore.h"
+#include "dataStoreServicios.h"
 
 void printServicio(eServicio servicio)
 {
-    printf("    %4d      %10s    %.2f  \n", servicio.idServicio, servicio.descripcionServicio, servicio.precioServicio);
+    printf("                   %4d      %15s    %.2f  \n", servicio.idServicio, servicio.descripcionServicio, servicio.precioServicio);
 }
 
 
@@ -18,7 +18,7 @@ int printServicios(eServicio servicios[], int tamt)
      int error = -1;
      int flag = 0;
 
-    if(tipos != NULL && tamt > 0)
+    if(servicios != NULL && tamt > 0)
     {
         //printf("\033[2J");
         printf("                   ***Listado de Servicios***\n");
@@ -55,8 +55,8 @@ int hardcodearServicios(eServicio servicios[], int tam, int cant)
         for(int i=0; i<cant; i++)
         {
             servicios[i].idServicio = idServicios[i];
-            strcpy(servicios[i].descripcionServicio, serviciosDesc[i]);
-            servicios[i].precioServicio = serviciosPrecio[i];
+            strcpy(servicios[i].descripcionServicio, descripcionServicios[i]);
+            servicios[i].precioServicio = precioServicios[i];
 
             retorno++; // esto me devolvera la cantidad de empleados hardcodeados
         }
@@ -65,7 +65,7 @@ int hardcodearServicios(eServicio servicios[], int tam, int cant)
     return retorno;
 }
 
-int cargarDescripcionServicio(eServicio servicios[], int tams, int id, char desripcion[])
+int cargarDescripcionServicio(eServicio servicios[], int tams, int id, char descripcion[], float precio)
 {
     int error =1;
 
@@ -76,10 +76,11 @@ int cargarDescripcionServicio(eServicio servicios[], int tams, int id, char desr
             if(servicios[i].idServicio == id)
             {
                 strcpy(descripcion, servicios[i].descripcionServicio);
-                error =0;
-                puts(descripcion);
-                break;
+                precio = precioServicios[i];
+
+
             }
+            error =0;
         }
         return error;
     }
